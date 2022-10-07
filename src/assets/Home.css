@@ -66,6 +66,7 @@ h1{
 }
 .heading1{
     text-align: center;
+    padding: 1.5%
 }
 .content{
     display: flex;
@@ -82,9 +83,9 @@ h1{
 }
 .shade {
     position: absolute;
-    height: 99%;
+    height: 102%;
     width: 100%;
-    top: 0;
+    top: -2;
     background-color:  rgba(59, 39, 84,0.6);
 }
 .grid {
@@ -151,9 +152,9 @@ h5{
 }
 .subscribe .shade{
     position: absolute;
-    height: 99%;
+    height: 102%;
     width: 100%;
-    top: 0%;
+    top: -2%;
     background-color:  rgba(59, 39, 84,0.6);
     
 }

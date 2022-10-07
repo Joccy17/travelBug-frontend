@@ -53,7 +53,7 @@ const Home = () => {
         <img src={shape} alt="" />
       </div>
       <section class="content">
-        {categories.map((category) => {
+        {categories && categories.results && categories.results.length > 0 && categories.results.map((category) => {
           return <CategoriesList key={category.id} category={category} />;
         })}
       </section>

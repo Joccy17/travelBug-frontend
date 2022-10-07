@@ -63,8 +63,8 @@ const Favorite=()=> {
         <img src={shape} alt="" />
       </div>
       <section class="content">
-        {categories.map((category)=>{
-          return <CategoriesList key={category.id} category={category}/>
+       {categories && categories.results && categories.results.length>0 && categories.map((category) => {
+          return <CategoriesList key={category.id} category={category} />;
         })}
       </section>
 
