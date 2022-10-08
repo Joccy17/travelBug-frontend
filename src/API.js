@@ -3,81 +3,81 @@ const LOGIN_USER_KEY = 'WD_FORUM_LOGIN_USER_KEY';
 
 var baseURL;
 
-    baseURL = 'https://a0ea5425-4da8-4cf1-8e90-c9815f69075a.id.repl.co/';
+baseURL = 'https://travelbug-backend.olufunsojoyce.repl.co/';
 
 
 
 const api = axios.create({
-    baseURL: baseURL,
-    headers: {
-        'Content-Type': 'application/json'
-    }
+  baseURL: baseURL,
+  headers: {
+    'Content-Type': 'application/json'
+  }
 });
 
 /**
  * Add requireToken: true in request config, for API that required Authorization token
  */
 api.interceptors.request.use(
-    config => {
-        if (config.requireToken && localStorage.getItem(LOGIN_USER_KEY)) {
-            config.headers.common['Authorization'] = JSON.parse(localStorage.getItem(LOGIN_USER_KEY)).token;
-        }
-
-        return config;
-    },
-    err => {
-        console.error(err);
+  config => {
+    if (config.requireToken && localStorage.getItem(LOGIN_USER_KEY)) {
+      config.headers.common['Authorization'] = JSON.parse(localStorage.getItem(LOGIN_USER_KEY)).token;
     }
+
+    return config;
+  },
+  err => {
+    console.error(err);
+  }
 );
 
 export default class API {
-    getPlaces = async (search, category, id) => {
-        let url = '/places/';
-        let query = new URLSearchParams();
-        if (search) {
-            query.append('search', search);
-        }
-        if (category) {
-            query.append('category', category);
-        }
-        if (id) {
-            query.append('id', id);
-        }
+  getPlaces = async (search, category, id) => {
+    let url = '/places/';
+    let query = new URLSearchParams();
+    if (search) {
+      query.append('search', search);
+    }
+    if (category) {
+      query.append('category', category);
+    }
+    if (id) {
+      query.append('id', id);
+    }
 
-        if (query.toString() !== '') {
-            url += '?' + query.toString();
-        }
+    if (query.toString() !== '') {
+      url += '?' + query.toString();
+    }
 
-        const places = await api
-            .get(url)
-            .then(response => {
-                return response.data;
-            })
-            .catch((error) => {
-                throw new Error(error);
-            });
-        return places;
-    };
-    getCategories = async (id) => {
-        let url1 ;
+    const places = await api
+      .get(url)
+      .then(response => {
+        return response.data;
+      })
+      .catch((error) => {
+        throw new Error(error);
+      });
+    return places;
+  };
+  getCategories = async (id) => {
+    let url1;
 
-        let query1 = new URLSearchParams();
-        if (id) {
-       url1=`/categories/?id=${id}`
-            
-        }
-        else{
-            url1='/categories/'
-        }
+    let query1 = new URLSearchParams();
+    if (id) {
+      url1 = `/categories/?id=${id}`
 
-        const categories = await api
-            .get(url1)
-            .then(response => {
-                return response.data;
-            })
-            .catch(error => {
-                throw new Error(error);
-            });
-        return categories;
-    };
+    }
+    else {
+      url1 = '/categories/'
+    }
+
+    const categories = await api
+      .get(url1)
+      .then(response => {
+        return response.data;
+      })
+      .catch(error => {
+        throw new Error(error);
+      });
+    return categories;
+  };
 }

@@ -91,7 +91,7 @@ const Highlight = (props) => {
         </div>
 
         <div className="index">
-          {categories.map((category) => {
+          {categories && categories.results && categories.results.length > 0 && categories.results.map((category) => {
             return <Prev key={category.id} category={category} />;
           })}
         </div>

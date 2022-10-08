@@ -68,6 +68,9 @@ h1{
 .heading1{
     text-align: center;
 }
+.hollywood a img:hover{
+  width:115%;
+}
 .content{
     display: flex;
     align-items: center;
@@ -78,6 +81,7 @@ h1{
 .hollywood{
     width: 100%;
 }
+
 .content p {
     text-align: center;
 }

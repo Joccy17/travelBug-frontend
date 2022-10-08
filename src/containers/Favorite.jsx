@@ -28,21 +28,21 @@ import { fetchCategories } from "../reducks/categories/operation";
 import CategoriesList from "../components/common/CategoriesList";
 import Favhead from "../components/common/Favhead";
 
-const Favorite=()=> {
-  const dispatch =useDispatch()
-  const selector=useSelector(state=>state)
-  const favorites=getFavorites(selector)
-  console.log('favorite',favorites);
-  
-  useEffect(()=>{
+const Favorite = () => {
+  const dispatch = useDispatch()
+  const selector = useSelector(state => state)
+  const favorites = getFavorites(selector)
+  console.log('favorite', favorites);
+
+  useEffect(() => {
     dispatch(fetchFavoriteAction())
     dispatch(fetchFromLocalStorage())
-  },[])
-  const categories=getCategories(selector)
-  
-  useEffect(()=>{
+  }, [])
+  const categories = getCategories(selector)
+
+  useEffect(() => {
     dispatch(fetchCategories())
-  },[])
+  }, [])
   return (
     <>
       <Header />
@@ -58,27 +58,19 @@ const Favorite=()=> {
         <div class="shade"></div>
       </section>
 
-      <div class="heading1">
-        <h1>Natural Wonders</h1>
-        <img src={shape} alt="" />
-      </div>
-      <section class="content">
-       {categories && categories.results && categories.results.length>0 && categories.map((category) => {
-          return <CategoriesList key={category.id} category={category} />;
-        })}
-      </section>
+     
 
       <div class="heading1">
-        <h1>Tourist Attractions in USA</h1>
+        <h1>Favorites</h1>
         <img src={shape} alt="" />
       </div>
       <div class="grid">
-        {favorites.map((favorite)=>{
-          return <Favhead favorite={favorite}/>
+        {favorites.map((favorite) => {
+          return <Favhead favorite={favorite} />
         })}
-         
+
       </div>
-      
+
 
       <Footer />
     </>
