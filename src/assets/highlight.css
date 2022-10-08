@@ -69,13 +69,13 @@ h1{
     text-align: center;
 }
 .hollywood a img:hover{
-  width:115%;
+  width:117%;
 }
 .content{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3%;
+    gap: 4%;
     width: 100%;
 }
 .hollywood{
