@@ -1,7 +1,9 @@
-# Getting Started with Create React App
+# TRAVEL BUG project based on React and Django.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+TRAVEL BUG PROJECT [LIVE FRONTEND](https://travelbug-frontend.olufunsojoyce.repl.co/).
 
+
+you can clone
 ## Available Scripts
 
 In the project directory, you can run:
