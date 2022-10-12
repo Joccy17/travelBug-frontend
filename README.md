@@ -1,72 +1,63 @@
 # TRAVEL BUG project based on React and Django.
 
 TRAVEL BUG PROJECT [LIVE FRONTEND](https://travelbug-frontend.olufunsojoyce.repl.co/).
+<img width="1653" alt="Screen Shot 2022-10-12 at 5 03 47 PM" src="https://user-images.githubusercontent.com/106774470/195456496-778a3def-27ec-44db-bbfb-33deffbe270f.png">
 
 
-you can clone
-## Available Scripts
+# Travel-Bug App in React & Redux + Django
 
-In the project directory, you can run:
+```
+Visiting USA? This virtual guide is extremely handy, you can scan the entire
+area in USA and find invaluable information of major attractions, places of 
+interest, events, museums, plays, and probable locations of rare species of 
+wild animals which you may be lucky enough to get a glimpse of! With this app,
+you can easily navigate your visit to USA!
+```
 
-### `npm start`
+## Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**This App uses a Heroku free plan, so I am afraid that it takes time to load the pages.**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Check out [FRONTEND LIVE DEMO](https://travel-bug-techis-frontend.herokuapp.com/) here!!
 
-### `npm test`
+Check out [API LIVE DEMO](https://travel-bug-techis-backend.herokuapp.com/) here!!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech used
 
-### `npm run build`
+```
+* Frontend : React & Redux
+* Backend : Django
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to Install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Git Clone
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+git clone https://github.com/Travel-Bug-Techis2022/Travel-Bug-GD.git
+```
 
-### `npm run eject`
+2. Backend setting
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+cd backend
+Python -m venv env
+(For Mac) source env/bin/activate
+(For Windows) env/Scripts\activate
+pip install -r requirements.txt
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+# Open http://127.0.0.1:8000/posts/
+# To have dummy data for testing run:
+python manage.py fixtures/dummy-data.json
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Frontend setting
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+cd frontend
+npm install
+npm start
+# Open http://127.0.0.1:3000/
+```
