@@ -16,7 +16,7 @@ you can easily navigate your visit to USA!
 
 ## Live Demo
 
-**This App uses a Heroku free plan, so I am afraid that it takes time to load the pages.**
+**This App uses a Replit free plan, so I am afraid that it takes time to load the pages.**
 
 Check out [FRONTEND LIVE DEMO](https://travel-bug-techis-frontend.herokuapp.com/) here!!
 
